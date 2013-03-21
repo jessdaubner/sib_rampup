@@ -1,0 +1,75 @@
+IRB exercises
+Each Ruby command will return a value. Sometimes, these values are not what we expect.
+
+Try the following Commands:
+
+string = "Hello World"
+=> "Hello World"
+
+string.reverse
+=> "dlroW olleH"
+
+string
+=> "Hello World"
+
+array = [3,1,2]
+=> [3, 1, 2]
+
+array.sort
+=> [1, 2, 3]
+
+array
+=> [3, 1, 2]
+
+array.sort!
+=> [1, 2, 3]
+
+array
+=> [1, 2, 3]
+
+=> What do you think the exclamation mark indicates?
+The underlying object has been changed.
+
+puts "Hello Ruby"
+=> nil
+
+array = [1, 2, 3, 4]
+=> [1, 2, 3, 4]
+
+array.each do |e|
+  e**2
+end
+=> [1, 2, 3, 4]
+
+array.each { |e| e**2 }
+=> [1, 2, 3, 4]
+
+array
+=> [1, 2, 3, 4]
+
+array.map do |e|
+  e**2
+end
+=> [1, 4, 9, 16]
+
+array
+=> [1, 2, 3, 4]
+
+array = [1,2,3]
+
+array.inject(0) do |sum, e|
+  sum += e
+  sum
+end
+=> 6
+
+array
+=> [1, 2, 3]
+
+array.reject do |e|
+  e > 2
+end
+=> [1, 2]
+
+array
+=> [1, 2, 3]
